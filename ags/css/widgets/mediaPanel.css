@@ -1,0 +1,23 @@
+@import url("../vars.css");
+
+* {
+    font-size: 15px;
+    /* font-weight: 900; */
+    text-decoration: none;
+}
+
+.media_panel {
+    padding: 16px;
+    border-radius: 0px 0px 8px 8px;
+
+
+    background: @c4;
+}
+
+.player {
+    min-width: 300px;
+    min-height: 150px;
+    margin-bottom: 200px;
+
+    background: @c3;
+}

@@ -1,0 +1,181 @@
+@import url("../vars.css");
+
+* {
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.bar {
+    background: @c4;
+    border-radius: 0px 0px 8px 8px;
+    border-bottom: 1px solid @c3;
+}
+
+.left, .center, .right {
+    background: none;
+    border: none;
+}
+
+.left {
+    padding-left: 16px;
+}
+
+.right {
+    padding-right: 16px;
+}
+
+.media {
+    border-radius: 16px;
+    border: none;
+    background: @c3;
+    color: @c2;
+
+    padding: 0px 12px 0px 12px;
+    margin: 4px 8px 4px 0px;
+}
+
+.panel, .panel1, .panel2, .panel3, .panel4 {
+    border-radius: 16px;
+    border: none;
+    background: @c3;
+    color: @c2;
+
+    padding: 0px 12px 0px 12px;
+    margin: 4px 8px 4px 0px;
+}
+
+.panel {
+    padding: 0px;
+    background: @c2;
+}
+
+.panel1 {
+    
+}
+
+.panel2 {
+    
+}
+
+.panel3 {
+    
+}
+
+.panel4 {
+    padding: 0px 6px 0px 6px;
+    background: @c2;
+}
+
+.wifi, .bluetooth {
+    background: @c3;
+    /* color: @c3; */
+    /* margin: 2px 0px 2px 0px; */
+    min-width: 48px;
+    border-radius: 99px;
+    padding: 0px;
+}
+
+.wifi {
+    border-radius: 99px 0px 0px 99px;
+    color: @c2;
+}
+
+.wifi_button {
+    padding: 0px;
+    background: none;
+    border: none;
+}
+
+.bluetooth {
+    border-radius: 0px 99px 99px 0px;
+    background: @c2;
+    color: @c3;
+}
+
+.volume {
+    margin-right: 0px;
+}
+
+.volume > .volume_icon {
+
+}
+
+.volume > .volume_percent {
+    /* margin-right: 16px; */
+    margin-right: 0px;
+}
+
+.battery {
+    /* margin-right: 16px; */
+}
+
+.battery > .battery_icon {
+    margin-right: 8px;
+}
+
+.time {
+    padding: 0px;
+    min-width: 0px;
+
+    background: none;
+    border: none;
+    color: @c2;
+}
+
+.power_button {
+    padding: 0px;
+    background: none;
+    border: none;
+}
+
+.power_button > .power_label {
+    color: @c4;
+}
+
+/* .lyrics {
+    min-width: 300px;
+} */
+
+.ws {
+    padding: 0px;
+    border-radius: 99px;
+
+    background: @c3;
+}
+
+.ws > .ws_button {
+    border: none;
+    margin: 2px 2px 2px 2px;
+    border-radius: 99px;
+
+    background: @c2;
+    color: @c4;
+
+    transition: 100ms;
+}
+
+.ws > .ws_button:hover {
+    background: @c4;
+    color: @c2;
+}
+
+.ws > .ws_button > .ws_label {
+    transition: 200ms;
+}
+
+.ws > .ws_active {
+    background: @c4;
+    color: @c2;
+}
+
+.dashboard_button {
+    padding: 0px 21px 0px 16px;
+    border-radius: 99px;
+    min-width: 64px;
+    margin: 4px 0px 4px 0px;
+
+    background: @c2;
+    color: @c4;
+    border: none;
+}

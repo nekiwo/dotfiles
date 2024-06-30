@@ -1,0 +1,13 @@
+@import './widgets/topbar.css';
+@import './widgets/mediaPanel.css';
+
+* {
+    /* font-family: CartographCF Nerd Font; */
+    /* font-family: iosevkaterm nerd font; */
+
+    /* font-family: iosevka extended; */
+
+    font-family: Nasalization, iosevka extended;
+
+    transition: 0ms;
+}
