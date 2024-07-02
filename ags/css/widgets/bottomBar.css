@@ -1,0 +1,166 @@
+@import url("../vars.css");
+
+* {
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.bar {
+    background: @c4;
+}
+
+.left, .center, .right {
+    background: none;
+    border: none;
+}
+
+.left {
+    padding-left: 16px;
+}
+
+.right {
+    padding-right: 16px;
+}
+
+.media {
+    border: none;
+    border-radius: 0px;
+    color: @c2;
+
+    padding: 0px 12px 0px 12px;
+}
+
+.panel, .panel1, .panel2, .panel3, .panel4 {
+    border: none;
+    padding: 0px 12px 0px 12px;
+}
+
+.panel {
+    padding: 0px;
+    background: none;
+}
+
+.panel1 {
+    
+}
+
+.panel2 {
+    
+}
+
+.panel3 {
+    
+}
+
+.panel4 {
+    padding: 0px 6px 0px 6px;
+    background: none;
+}
+
+.wifi, .bluetooth {
+    min-width: 48px;
+    padding: 0px;
+}
+
+.wifi {
+    color: @c2;
+    border: none;
+}
+
+.wifi_button {
+    padding: 0px;
+    background: none;
+    border: none;
+}
+
+.bluetooth {
+
+}
+
+.volume {
+    margin-right: 0px;
+}
+
+.volume > .volume_icon {
+
+}
+
+.volume > .volume_percent {
+    /* margin-right: 16px; */
+    margin-right: 0px;
+}
+
+.battery {
+    /* margin-right: 16px; */
+}
+
+.battery > .battery_icon {
+    margin-right: 8px;
+}
+
+.time {
+    padding: 0px;
+    min-width: 0px;
+
+    background: none;
+    color: @c2;
+
+    border: none;
+}
+
+.power_button {
+    padding: 0px 8px 0px 8px;
+    border-radius: 0px;
+}
+
+.power_button > .power_label {
+    border: none;
+}
+
+/* .lyrics {
+    min-width: 300px;
+} */
+
+.ws {
+    padding: 0px;
+}
+
+.ws > .ws_button {
+    border-radius: 0px;
+}
+
+.ws > .ws_button > .ws_label {
+
+}
+
+/* .ws > .ws_active {
+    background: @c4;
+    color: @c2;
+} */
+
+
+
+
+
+.button {
+    margin: 2px;
+    border: 2px solid @c2;
+    border-right: 2px solid @c5;
+    border-bottom: 2px solid @c5;
+
+    background: @c3;
+    color: @c2;
+
+    transition: 100ms;
+}
+
+.inverted {
+    margin: 2px;
+    border: 2px solid @c5;
+    border-right: 2px solid @c2;
+    border-bottom: 2px solid @c2;
+
+    background: @c3;
+    color: @c2;
+}
