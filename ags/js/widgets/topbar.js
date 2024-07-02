@@ -183,7 +183,7 @@ const getNotifications = () => Widget.Box({
 
 // const lyrics = getLyrics();
 // const lyricsProc = subprocess(
-//     ['/home/user/.config/ags/scripts/lyrics.sh'], // command to run, in an array just like execAsync
+//     ['~/.config/ags/scripts/lyrics.sh'], // command to run, in an array just like execAsync
 //     (line) => {
 //         lyrics.label += "\n" + line;
 //         let splitLines = lyrics.label.split('\n')

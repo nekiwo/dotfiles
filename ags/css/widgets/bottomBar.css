@@ -4,10 +4,11 @@
     font-size: 15px;
     font-weight: 900;
     text-decoration: none;
+    outline: none;
 }
 
 .bar {
-    background: @c4;
+    background: @c3;
 }
 
 .left, .center, .right {
@@ -26,7 +27,7 @@
 .media {
     border: none;
     border-radius: 0px;
-    color: @c2;
+    color: @c4;
 
     padding: 0px 12px 0px 12px;
 }
@@ -64,7 +65,7 @@
 }
 
 .wifi {
-    color: @c2;
+    color: @c4;
     border: none;
 }
 
@@ -104,7 +105,7 @@
     min-width: 0px;
 
     background: none;
-    color: @c2;
+    color: @c4;
 
     border: none;
 }
@@ -136,7 +137,7 @@
 
 /* .ws > .ws_active {
     background: @c4;
-    color: @c2;
+    color: @c4;
 } */
 
 
@@ -150,7 +151,7 @@
     border-bottom: 2px solid @c5;
 
     background: @c3;
-    color: @c2;
+    color: @c4;
 
     transition: 100ms;
 }
@@ -162,5 +163,5 @@
     border-bottom: 2px solid @c2;
 
     background: @c3;
-    color: @c2;
+    color: @c4;
 }
