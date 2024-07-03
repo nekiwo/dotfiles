@@ -1,10 +1,13 @@
 @import url("../vars.css");
 
 * {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 900;
     text-decoration: none;
     outline: none;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .bar {
@@ -21,7 +24,7 @@
 }
 
 .right {
-    padding-right: 16px;
+    /* padding-right: 16px; */
 }
 
 .media {
@@ -55,7 +58,7 @@
 }
 
 .panel4 {
-    padding: 0px 6px 0px 6px;
+    padding: 0px 2px 0px 0px;
     background: none;
 }
 
@@ -76,7 +79,7 @@
 }
 
 .bluetooth {
-
+    
 }
 
 .volume {
@@ -149,6 +152,7 @@
     border: 2px solid @c2;
     border-right: 2px solid @c5;
     border-bottom: 2px solid @c5;
+    border-radius: 0px;
 
     background: @c3;
     color: @c4;
@@ -156,12 +160,24 @@
     transition: 100ms;
 }
 
+.inverted_button {
+    margin: 2px;
+    border: 2px solid @c5;
+    border-right: 2px solid @c2;
+    border-bottom: 2px solid @c2;
+    border-radius: 0px;
+
+    background: @c3;
+    color: @c4;
+}
+
 .inverted {
     margin: 2px;
     border: 2px solid @c5;
     border-right: 2px solid @c2;
     border-bottom: 2px solid @c2;
+    border-radius: 0px;
 
-    background: @c3;
+    background: @c1;
     color: @c4;
 }

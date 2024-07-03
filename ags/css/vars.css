@@ -2,6 +2,7 @@
 /* @define-color black #1d1b1a; */
 /* @define-color c1 #6528F7; */
 
+@define-color c1 #9b65ad; /* slightly dark for inverted background */
 @define-color c2 #ceb0d9; /* lightest green */
 @define-color c3 #a17dad; /* background green */
 @define-color c5 #615266; /* darkgest green shadow */

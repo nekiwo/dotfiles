@@ -4,6 +4,7 @@ import Audio from 'resource:///com/github/Aylur/ags/service/audio.js';
 import Battery from 'resource:///com/github/Aylur/ags/service/battery.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import Network from 'resource:///com/github/Aylur/ags/service/network.js';
+// import Bluetooth from 'resource:///com/github/Aylur/ags/service/bluetooth.js';
 import { exec, execAsync, subprocess } from 'resource:///com/github/Aylur/ags/utils.js';
 import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 import { getMediaPanel } from './mediaPanel.js'
@@ -86,22 +87,9 @@ const getVolume = () => Widget.Box({
 //     }),
 // });
 
-let mediaToggle = false;
 const getMedia = () => Widget.Button({
     className: 'media button',
-    onClicked: (self) => {
-        console.log(mediaToggle)
-        if (!mediaToggle) {
-            App.openWindow('media_window')
-            App.getWindow('media_window').child.transition = 'slide_down';
-            App.getWindow('media_window').child.revealChild = true;
-        } else {
-            App.closeWindow('media_window')
-            App.getWindow('media_window').child.transition = 'slide_up';
-            App.getWindow('media_window').child.revealChild = false;
-        }
-        mediaToggle = !mediaToggle;
-    },
+    onClicked: (self) => execAsync("playerctl play-pause"),
     child: Widget.Label({
         connections: [[Mpris, self => {
             const mpris = Mpris.getPlayer('');
@@ -113,9 +101,9 @@ const getMedia = () => Widget.Button({
                 }
 
                 if (mpris.play_back_status == 'Playing') {
-                    self.label = `  ${song}`;
+                    self.label = `[Playing] ${song}`;//  
                 } else {
-                    self.label = `  ${song}`;
+                    self.label = `[Paused] ${song}`;//  
                 }
             } else {
                 self.label = 'Nothing is playing';
@@ -124,23 +112,47 @@ const getMedia = () => Widget.Button({
     })
 });
 
+let wifiToggle = true;
 const getWifi = () => Widget.Button({
     className: 'wifi_button',
     onClicked: (self) => {
-
+        if (wifiToggle) {
+            execAsync("nmcli networking off");
+            self.child.className = "wifi inverted_button";
+            wifiToggle = false;
+        } else {
+            execAsync("nmcli networking on");
+            self.child.className = "wifi button";
+            wifiToggle = true;
+        }
     },
+    onSecondaryClick: () => execAsync("kitty nmtui"),
     child: Widget.Icon({
         className: 'wifi button',
         binds: [['icon', Network.wifi, 'icon-name']],
     })
 })
 
-const getBluetooth = () => Widget.Label({
+let btToggle = true;
+const getBluetooth = () => Widget.Button({
     className: 'bluetooth button',
-    label: '󰂯',
-    connections: [[Battery, self => {
-        // self.label = Battery.percent + "%";
-    }]],
+    onClicked: (self) => {
+        if (btToggle) {
+            execAsync("rfkill block bluetooth");
+            self.className = "bluetooth inverted_button";
+            btToggle = false;
+        } else {
+            execAsync("rfkill unblock bluetooth");
+            self.className = "bluetooth button";
+            btToggle = true;
+        }
+    },
+    onSecondaryClick: () => execAsync("blueman-manager"),
+    child: Widget.Icon({
+        className: 'wifi',
+        // binds: [['icon', Bluetooth, 'connected-devices']],
+        icon: "bluetooth-symbolic"
+    })
 });
 
 const getBattery = () => Widget.Box({
@@ -183,7 +195,7 @@ const getNotifications = () => Widget.Box({
 
 // const lyrics = getLyrics();
 // const lyricsProc = subprocess(
-//     ['~/.config/ags/scripts/lyrics.sh'], // command to run, in an array just like execAsync
+//     ['/home/user/.config/ags/scripts/lyrics.sh'], // command to run, in an array just like execAsync
 //     (line) => {
 //         lyrics.label += "\n" + line;
 //         let splitLines = lyrics.label.split('\n')
@@ -228,7 +240,7 @@ const getWsItem = (num) => Widget.Button({
         [Hyprland, self => {
             if (Hyprland) {
                 if (Hyprland.active.workspace._id === num) {
-                    self.className = 'ws_button ws_active inverted'
+                    self.className = 'ws_button ws_active inverted_button'
                 } else {
                     self.className = 'ws_button button'
                 }
