@@ -4,10 +4,16 @@
     font-size: 16px;
     font-weight: 900;
     text-decoration: none;
-    outline: none;
 
     padding-top: 0px;
     padding-bottom: 0px;
+
+    box-shadow: none;
+
+    text-shadow: none;
+    outline: none;
+    text-decoration-color: white;
+    opacity: 1.0;
 }
 
 .bar {
@@ -148,6 +154,7 @@
 
 
 .button {
+    padding: 0px 4px 0px 4px;
     margin: 2px;
     border: 2px solid @c2;
     border-right: 2px solid @c5;
@@ -161,6 +168,7 @@
 }
 
 .inverted_button {
+    padding: 0px 4px 0px 4px;
     margin: 2px;
     border: 2px solid @c5;
     border-right: 2px solid @c2;
