@@ -3,8 +3,8 @@
 /* @define-color c1 #6528F7; */
 
 @define-color c1 #9b65ad; /* slightly dark for inverted background */
-@define-color c2 #ceb0d9; /* lightest green */
-@define-color c3 #a17dad; /* background green */
-@define-color c5 #615266; /* darkgest green shadow */
+@define-color c2 #ceb0d9; /* lightest purple */
+@define-color c3 #a17dad; /* background purple */
+@define-color c5 #615266; /* darkgest purple shadow */
 
-@define-color c4 #6effc9; /* text green */
+@define-color c4 #8be295; /* text green */
