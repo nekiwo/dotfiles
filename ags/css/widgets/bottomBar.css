@@ -103,6 +103,7 @@
 
 .battery {
     /* margin-right: 16px; */
+    padding: 0px 4px 0px 4px;
 }
 
 .battery > .battery_icon {
@@ -110,7 +111,7 @@
 }
 
 .time {
-    padding: 0px;
+    padding: 0px 4px 0px 4px;
     min-width: 0px;
 
     background: none;
@@ -138,6 +139,7 @@
 
 .ws > .ws_button {
     border-radius: 0px;
+    min-width: 18px;
 }
 
 .ws > .ws_button > .ws_label {
@@ -154,7 +156,7 @@
 
 
 .button {
-    padding: 0px 4px 0px 4px;
+    padding: 2px 4px 0px 4px;
     margin: 2px;
     border: 2px solid @c2;
     border-right: 2px solid @c5;
@@ -168,7 +170,7 @@
 }
 
 .inverted_button {
-    padding: 0px 4px 0px 4px;
+    padding: 2px 4px 0px 4px;
     margin: 2px;
     border: 2px solid @c5;
     border-right: 2px solid @c2;
@@ -180,6 +182,7 @@
 }
 
 .inverted {
+    padding: 2px 4px 0px 4px;
     margin: 2px;
     border: 2px solid @c5;
     border-right: 2px solid @c2;
